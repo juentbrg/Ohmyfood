@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Shrikhand&display=swap');
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-gradient-primary: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+$color-gradient-secondary: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 
 *{
     margin: 0;
@@ -9,3 +15,4 @@
 body{
     font-family: 'Inter', sans-serif;
 }
+
