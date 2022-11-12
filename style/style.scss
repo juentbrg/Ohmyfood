@@ -6,6 +6,7 @@ $color-tertiary: #99E2D0;
 $color-gradient-primary: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 $color-gradient-secondary: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 $color-grey-back: #F7F7F7;
+$color-white: #FFFFFF;
 
 *{
     margin: 0;
@@ -88,12 +89,12 @@ header{
         border-radius: 25px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         background: $color-gradient-primary;
-        color: #FFFFFF;
+        color: $color-white;
     }
 }
 /* Explore end */
 
-/* functioning */
+/* Functioning */
 .functioning{
     width: 100%;
     height: 440px;
@@ -139,14 +140,137 @@ header{
         border-radius: 25px;
         padding: 1px 7px;
         background-color: $color-primary;
-        color: #FFF;
+        color: $color-white;
         position: absolute;
         left: -12px;
         top: 24.19px;
     }
 }
-/* functioning end */
+/* Functioning end */
 
-/* restaurants */
+/* Restaurants */
+.restaurants{
+    width: 100%;
+    height: 1226px;
+    background-color: $color-grey-back;
+    padding: 47px 4.50% 64px 4.50%;
+    h2{
+        font-weight: 700;
+        font-size: 24px;
+        height: 57px;
+    }
+    &__card{
+        width: 100%;
+        height: 1058px;
+        display: grid;
+        gap: 1.7%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 251px);
+    }
+    &__card__content{
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        background: $color-white;
+    }
+    &__card__image{
+        width: 100%;
+        height: 174px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 62%;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+        .restaurants__card__new{
+            width: 80px;
+            height: 29px;
+            padding: 6px 12px;
+            font-weight: 500;
+            font-size: 14px;
+            background-color: $color-tertiary;
+            color: darken($color: $color-tertiary, $amount: 45);
+            position: absolute;
+            bottom: 132px;
+            right: 14.6px;
+            cursor: default;
+        }
+    }
+    &__card__image.first{
+        background-image: url(img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
+    }
+    &__card__image.second{
+        background-image: url(img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
+    }
+    &__card__image.third{
+        background-image: url(img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
+    }
+    &__card__image.fourth{
+        background-image: url(img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
+    }
+    &__card__description{
+        width: 100%;
+        height: 77px;
+        padding: 16px 25px 12px 12.81px;
+        position: relative;
+        h3{
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        p{
+            font-weight: 300;
+            font-size: 17px;
+        }
+        .restaurants__card__icon i{
+            font-size: 21px;
+            font-weight: 100;
+            position: absolute;
+            top: 23px;
+            right: 24.63px;
+            cursor: pointer;
+            transition: all .4s ease;
+        }
+        .restaurants__card__icon i:hover{
+            font-weight: bold;
+            background: $color-gradient-primary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+/* Restaurants */
 
-/* restaurants */
+/* Footer */
+footer{
+    width: 100%;
+    height: 197px;
+    padding: 22px 25px 33px 25px;
+    background-color: #353535;
+    h3{
+        font-family: 'Shrikhand';
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 16px;
+        color: $color-white;
+    }
+    .footer__content{
+        display: flex;
+        flex-direction: column;
+        &__icon{
+            display: flex;
+        }
+        &__icon p{
+            color: $color-white;
+        }
+        &__icon a{
+            margin-left: 11px;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 7px;
+            color: $color-white;
+        }
+    }
+}
+/* Footer end */ 
