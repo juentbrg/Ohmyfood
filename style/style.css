@@ -84,4 +84,60 @@ header h1 {
   color: #FFFFFF;
 }
 
-/* Explore end *//*# sourceMappingURL=style.css.map */
+/* Explore end */
+/* functioning */
+.functioning {
+  width: 100%;
+  height: 440px;
+  padding: 48px 5.33% 68px 5.33%;
+}
+.functioning h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.functioning__card {
+  width: 100%;
+  height: 267px;
+  margin-top: 26px;
+  display: grid;
+  gap: 9.33%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 72.38px);
+}
+.functioning__card__content {
+  display: flex;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  line-height: 72.38px;
+  justify-content: center;
+  position: relative;
+}
+.functioning__card__text {
+  margin-left: 27px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.functioning__card__icon i {
+  color: #7E7E7E;
+}
+.functioning__card__icon.purple i {
+  color: #9356DC;
+}
+.functioning__card__number {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 25px;
+  padding: 1px 7px;
+  background-color: #9356DC;
+  color: #FFF;
+  position: absolute;
+  left: -12px;
+  top: 24.19px;
+}
+
+/* functioning end */
+/* restaurants */
+/* restaurants *//*# sourceMappingURL=style.css.map */
