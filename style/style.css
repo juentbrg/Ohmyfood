@@ -317,7 +317,7 @@ footer .footer__content__icon a {
 /* Menu */
 .menu {
   width: 100%;
-  height: 1115px;
+  height: auto;
   padding: 32px 13px 40px 13px;
   margin-top: -50px;
   border-radius: 50px 50px 0 0;
@@ -350,25 +350,30 @@ footer .footer__content__icon a {
 }
 .menu__food {
   width: 100%;
-  height: auto;
+  height: 275px;
   margin-bottom: 40px;
 }
 .menu__food h3 {
+  height: 27px;
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
   margin-bottom: 12px;
 }
+.menu__food.special {
+  height: 357px;
+}
 .menu__card {
   width: 100%;
-  height: 228.21px;
+  height: auto;
   display: grid;
   gap: 5.26% 0;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, 68.07px);
+  grid-template-rows: repeat(4, 68.07px);
 }
 .menu__card__content {
   display: flex;
+  cursor: pointer;
 }
 .menu__card__title {
   background: #FFFFFF;
@@ -421,6 +426,8 @@ footer .footer__content__icon a {
 .menu__check i {
   color: #FFFFFF;
   font-size: 25px;
+  transition: all 0.5s ease;
+  transform: rotate(180deg);
 }
 .menu__card__content:hover .menu__card__title {
   border-radius: 15.0431px 0 0 15.0431px;
@@ -428,6 +435,9 @@ footer .footer__content__icon a {
 .menu__card__content:hover .menu__check {
   width: 20%;
   opacity: 100%;
+}
+.menu__card__content:hover .menu__check i {
+  transform: rotate(0);
 }
 .menu__btn {
   width: 100%;
