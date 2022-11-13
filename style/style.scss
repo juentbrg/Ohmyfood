@@ -192,7 +192,7 @@ header{
         transition: all .4s ease;
     }
     &__card__content:hover{
-        transform: scale(1.03);
+        transform: scale(0.97);
     }
     &__card__image{
         display: block;
@@ -313,6 +313,16 @@ footer{
     background-size: cover;
     &.first{
         background-image: url(img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
+    }
+    &.second{
+        background-image: url(img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
+        background-position: 70%;
+    }
+    &.third{
+        background-image: url(img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
+    }
+    &.fourth{
+        background-image: url(img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
     }
 }
 /* Banner end */
