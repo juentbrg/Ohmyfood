@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -7,6 +7,7 @@ $color-gradient-primary: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.7
 $color-gradient-secondary: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 $color-grey-back: #F7F7F7;
 $color-white: #FFFFFF;
+$color-black: #000000;
 
 *{
     margin: 0;
@@ -18,6 +19,8 @@ body{
     font-family: 'Roboto';
 }
 
+/* index.html -------------------------------------------------------------------------------------*/
+
 /* Header */
 header{
     width: 100%;
@@ -25,12 +28,21 @@ header{
     padding-top: 14px;
     text-align: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
     h1{
         font-family: 'Shrikhand';
         font-style: italic;
         font-weight: 400;
         font-size: 30px;
         line-height: 44px;
+    }
+    .return{
+        text-decoration: none;
+        font-size: 23px;
+        position: absolute;
+        top: 21px;
+        left: 23px;
+        color: $color-black;
     }
 }
 /* Header end */
@@ -90,6 +102,9 @@ header{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         background: $color-gradient-primary;
         color: $color-white;
+        &:hover{
+            background: $color-gradient-secondary;
+        }
     }
 }
 /* Explore end */
@@ -119,6 +134,7 @@ header{
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
         line-height: 72.38px;
+        cursor: default;
         justify-content: center;
         position: relative;
     }
@@ -170,9 +186,16 @@ header{
     &__card__content{
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
+        text-decoration: none;
+        color: $color-black;
         background: $color-white;
+        transition: all .4s ease;
+    }
+    &__card__content:hover{
+        transform: scale(1.03);
     }
     &__card__image{
+        display: block;
         width: 100%;
         height: 174px;
         background-repeat: no-repeat;
@@ -211,10 +234,12 @@ header{
         height: 77px;
         padding: 16px 25px 12px 12.81px;
         position: relative;
-        h3{
+        .restaurant__card__title{
             font-weight: 700;
             font-size: 18px;
             margin-bottom: 5px;
+            text-decoration: none;
+            color: $color-black;
         }
         p{
             font-weight: 300;
@@ -222,7 +247,6 @@ header{
         }
         .restaurants__card__icon i{
             font-size: 21px;
-            font-weight: 100;
             position: absolute;
             top: 23px;
             right: 24.63px;
@@ -261,16 +285,40 @@ footer{
         &__icon p{
             color: $color-white;
         }
-        &__icon a{
-            margin-left: 11px;
-        }
         a{
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 16px;
             margin-bottom: 7px;
             color: $color-white;
         }
+        &__icon a{
+            margin-left: 11px;
+            font-weight: 500;
+        }
     }
 }
 /* Footer end */ 
+
+/* index.html -------------------------------------------------------------------------------------*/
+
+/* pages anexes -----------------------------------------------------------------------------------*/
+
+/* Banner */
+.banner{
+    width: 100%;
+    height: 275px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.first{
+        background-image: url(img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
+    }
+}
+/* Banner end */
+
+/* Menu */ 
+
+/* Menu end */
+
+/* pages anexes -----------------------------------------------------------------------------------*/

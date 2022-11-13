@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +9,7 @@ body {
   font-family: "Roboto";
 }
 
+/* index.html -------------------------------------------------------------------------------------*/
 /* Header */
 header {
   width: 100%;
@@ -16,6 +17,7 @@ header {
   padding-top: 14px;
   text-align: center;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 header h1 {
   font-family: "Shrikhand";
@@ -23,6 +25,14 @@ header h1 {
   font-weight: 400;
   font-size: 30px;
   line-height: 44px;
+}
+header .return {
+  text-decoration: none;
+  font-size: 23px;
+  position: absolute;
+  top: 21px;
+  left: 23px;
+  color: #000000;
 }
 
 /* Header end */
@@ -83,6 +93,9 @@ header h1 {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   color: #FFFFFF;
 }
+.explore a:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
 
 /* Explore end */
 /* Functioning */
@@ -111,6 +124,7 @@ header h1 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   line-height: 72.38px;
+  cursor: default;
   justify-content: center;
   position: relative;
 }
@@ -162,9 +176,16 @@ header h1 {
 .restaurants__card__content {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  text-decoration: none;
+  color: #000000;
   background: #FFFFFF;
+  transition: all 0.4s ease;
+}
+.restaurants__card__content:hover {
+  transform: scale(1.03);
 }
 .restaurants__card__image {
+  display: block;
   width: 100%;
   height: 174px;
   background-repeat: no-repeat;
@@ -204,10 +225,12 @@ header h1 {
   padding: 16px 25px 12px 12.81px;
   position: relative;
 }
-.restaurants__card__description h3 {
+.restaurants__card__description .restaurant__card__title {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 5px;
+  text-decoration: none;
+  color: #000000;
 }
 .restaurants__card__description p {
   font-weight: 300;
@@ -215,7 +238,6 @@ header h1 {
 }
 .restaurants__card__description .restaurants__card__icon i {
   font-size: 21px;
-  font-weight: 100;
   position: absolute;
   top: 23px;
   right: 24.63px;
@@ -254,15 +276,34 @@ footer .footer__content__icon {
 footer .footer__content__icon p {
   color: #FFFFFF;
 }
-footer .footer__content__icon a {
-  margin-left: 11px;
-}
 footer .footer__content a {
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   margin-bottom: 7px;
   color: #FFFFFF;
 }
+footer .footer__content__icon a {
+  margin-left: 11px;
+  font-weight: 500;
+}
 
-/* Footer end *//*# sourceMappingURL=style.css.map */
+/* Footer end */
+/* index.html -------------------------------------------------------------------------------------*/
+/* pages anexes -----------------------------------------------------------------------------------*/
+/* Banner */
+.banner {
+  width: 100%;
+  height: 275px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner.first {
+  background-image: url(img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
+}
+
+/* Banner end */
+/* Menu */
+/* Menu end */
+/* pages anexes -----------------------------------------------------------------------------------*//*# sourceMappingURL=style.css.map */
