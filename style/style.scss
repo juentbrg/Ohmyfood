@@ -190,6 +190,7 @@ header{
         color: $color-black;
         background: $color-white;
         transition: all .4s ease;
+        user-select: none;
     }
     &__card__content:hover{
         transform: scale(0.97);
@@ -302,7 +303,7 @@ footer{
 
 /* index.html -------------------------------------------------------------------------------------*/
 
-/* pages anexes -----------------------------------------------------------------------------------*/
+/* annex pages ------------------------------------------------------------------------------------*/
 
 /* Banner */
 .banner{
@@ -386,6 +387,7 @@ footer{
     &__card__content{
         display: flex;
         cursor: pointer;
+        user-select: none;
     }
     &__card__title{
         background: $color-white;
@@ -474,4 +476,23 @@ footer{
 }
 /* Menu end */
 
-/* pages anexes -----------------------------------------------------------------------------------*/
+/* annex pages ------------------------------------------------------------------------------------*/
+
+/* Responsive */ 
+@media all and (min-width: 767px){
+    .functioning{
+        padding: 48px 16% 68px 16%;
+    }
+    .restaurants{
+        padding: 47px 16% 64px 16%;
+    }
+}
+
+@media all and (min-width: 991px){
+    html{
+        max-width: 1400px;
+        margin: auto;
+    }
+
+}
+/* Responsive end */

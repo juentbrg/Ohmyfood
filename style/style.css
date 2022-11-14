@@ -180,6 +180,10 @@ header .return {
   color: #000000;
   background: #FFFFFF;
   transition: all 0.4s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .restaurants__card__content:hover {
   transform: scale(0.97);
@@ -290,7 +294,7 @@ footer .footer__content__icon a {
 
 /* Footer end */
 /* index.html -------------------------------------------------------------------------------------*/
-/* pages anexes -----------------------------------------------------------------------------------*/
+/* annex pages ------------------------------------------------------------------------------------*/
 /* Banner */
 .banner {
   width: 100%;
@@ -374,6 +378,10 @@ footer .footer__content__icon a {
 .menu__card__content {
   display: flex;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .menu__card__title {
   background: #FFFFFF;
@@ -461,4 +469,20 @@ footer .footer__content__icon a {
 }
 
 /* Menu end */
-/* pages anexes -----------------------------------------------------------------------------------*//*# sourceMappingURL=style.css.map */
+/* annex pages ------------------------------------------------------------------------------------*/
+/* Responsive */
+@media all and (min-width: 767px) {
+  .functioning {
+    padding: 48px 16% 68px 16%;
+  }
+  .restaurants {
+    padding: 47px 16% 64px 16%;
+  }
+}
+@media all and (min-width: 991px) {
+  html {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+/* Responsive end *//*# sourceMappingURL=style.css.map */
