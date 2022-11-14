@@ -488,14 +488,14 @@ footer .footer__content__icon a {
   footer h3 {
     margin-bottom: 0;
     position: absolute;
-    top: 20px;
+    top: 18px;
     right: 40px;
   }
   footer .footer__content {
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 22px;
+    top: 20px;
     right: 180px;
   }
   footer .footer__content a {
