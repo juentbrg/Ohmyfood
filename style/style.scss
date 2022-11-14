@@ -479,20 +479,114 @@ footer{
 /* annex pages ------------------------------------------------------------------------------------*/
 
 /* Responsive */ 
-@media all and (min-width: 767px){
+@media all and (min-width: 783px){
+    /* index */
     .functioning{
         padding: 48px 16% 68px 16%;
     }
     .restaurants{
         padding: 47px 16% 64px 16%;
     }
+
+    footer{
+        height: 14px;
+        padding: 22px 25px 33px 25px;
+        display: flex;
+        position: relative;
+        h3{
+            margin-bottom: 0;
+            position: absolute;
+            top: 20px;
+            right: 40px;
+        }
+        .footer__content{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 22px;
+            right: 180px;
+            a{
+                margin-bottom: 0;
+                margin-left: 20px;
+            }
+            &__icon{
+                margin-left: 20px;
+            }
+            &__icon a{
+                margin-left: 8px;
+            }
+        }
+    }
+    /* index end */
+    
+    /* annex pages */
+    .menu{
+        width: 80%;
+        margin-top: -50px;
+        margin-left: 10%;
+        padding: 40px 10% 40px 10%;
+        &__title{
+            width: 360px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+    }
+    /* annex pages end*/
 }
 
-@media all and (min-width: 991px){
-    html{
-        max-width: 1400px;
-        margin: auto;
+@media all and (min-width: 1100px){
+    /*index*/
+    .functioning{
+        height: auto;
+        padding: 50px 14.29% 80px 14.29%;
+        &__card{
+            height: auto;
+            gap: 3%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 72.38px);
+        }
     }
+    .restaurants{
+        height: auto;
+        padding: 46px 14.29% 82px 14.29%;
+        &__card{
+            height: auto;
+            gap: 4.5% 3%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 251px);
+        }
+    }
+    footer{
+        h3{
+            right: 80px;
+        }
+        .footer__content{
+            right: 270px;
+            a{
+                margin-left: 40px;
+            }
+            &__icon{
+                margin-left: 40px;
+            }
+            &__icon a{
+                margin-left: 11px;
+            }
+        }
+    }
+    /* index end */
 
+    /* annex pages */
+    .menu{
+        width: 73.22%;
+        margin-top: -50px;
+        margin-left: 13.39%;
+        padding: 51px 17.2% 40px 17.2%;
+        &__title{
+            width: 360px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+    }
+    /* annex pages end*/
 }
 /* Responsive end */
