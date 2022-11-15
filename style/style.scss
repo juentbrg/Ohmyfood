@@ -366,11 +366,17 @@ footer{
         height: 275px;
         margin-bottom: 40px;
         h3{
+            width: 40px;
             height: 27px;
             font-weight: 300;
             font-size: 16px;
             line-height: 19px;
             margin-bottom: 12px;
+            border-bottom: 2px solid $color-tertiary;
+            white-space: nowrap;
+        }
+        h3.special{
+            margin-left: 37px;
         }
     }
     &__food.special{

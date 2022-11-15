@@ -358,11 +358,17 @@ footer .footer__content__icon a {
   margin-bottom: 40px;
 }
 .menu__food h3 {
+  width: 40px;
   height: 27px;
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
   margin-bottom: 12px;
+  border-bottom: 2px solid #99E2D0;
+  white-space: nowrap;
+}
+.menu__food h3.special {
+  margin-left: 37px;
 }
 .menu__food.special {
   height: 357px;
