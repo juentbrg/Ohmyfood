@@ -21,6 +21,74 @@ body{
 
 /* index.html -------------------------------------------------------------------------------------*/
 
+/* Loading */
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.80);
+    z-index: 1;
+    opacity: 1;
+    animation: loader .5s 2s ease-out forwards;
+    &__animation{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 30px 30px 30px;
+        background-color: #F7F7F7;
+        border-radius: 15px;
+        .loading__balls{
+            display: flex;
+            margin-bottom: 7px;
+        }
+        .ball{
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: $color-gradient-primary;
+            animation: bounce 1s infinite;
+        }
+        .ball:nth-child(2){
+            animation-delay: .1s;
+        }
+        .ball:nth-child(3){
+            animation-delay: .2s;
+        }
+        .ball:not(:last-child){
+            margin-right: 15px;
+        }
+        .text{
+            font-size: 20px;
+        }
+    }
+}
+
+@keyframes loader{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+/* Loading end */
+
 /* Header */
 header{
     width: 100%;
@@ -102,8 +170,10 @@ header{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         background: $color-gradient-primary;
         color: $color-white;
+        transition: all .3s ease-in-out;
         &:hover{
             background: $color-gradient-secondary;
+            box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
         }
     }
 }
@@ -404,6 +474,8 @@ footer{
         padding: 10px 12px;
         transition: all .3s ease;
         position: relative;
+        opacity: 0;
+        transform: translate(-30px);
         h4{
             font-weight: 500;
             font-size: 18px;
@@ -432,6 +504,36 @@ footer{
             top: 39px;
             right: 18px;
         }
+    }
+    &__card__title.one{
+        animation: appearance .4s .2s ease-out forwards;
+    }
+    &__card__title.two{
+        animation: appearance .4s .4s ease-out forwards;
+    }
+    &__card__title.three{
+        animation: appearance .4s .6s ease-out forwards;
+    }
+    &__card__title.four{
+        animation: appearance .4s .8s ease-out forwards;
+    }
+    &__card__title.five{
+        animation: appearance .4s 1s ease-out forwards;
+    }
+    &__card__title.six{
+        animation: appearance .4s 1.2s ease-out forwards;
+    }
+    &__card__title.seven{
+        animation: appearance .4s 1.4s ease-out forwards;
+    }
+    &__card__title.eight{
+        animation: appearance .4s 1.6s ease-out forwards;
+    }
+    &__card__title.nine{
+        animation: appearance .4s 1.8s ease-out forwards;
+    }
+    &__card__title.ten{
+        animation: appearance .4s 2s ease-out forwards;
     }
     &__check{
         background-color: $color-tertiary;
@@ -475,9 +577,18 @@ footer{
         line-height: 19px;
         color: $color-white;
         background: $color-gradient-primary;
+        transition: all .3s ease-in-out;
         &:hover{
             background: $color-gradient-secondary;
+            box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.35);
         }
+    }
+}
+
+@keyframes appearance{
+    100%{
+        opacity: 1;
+        transform: none;
     }
 }
 /* Menu end */

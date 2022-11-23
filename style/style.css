@@ -10,6 +10,94 @@ body {
 }
 
 /* index.html -------------------------------------------------------------------------------------*/
+/* Loading */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  opacity: 1;
+  -webkit-animation: loader 0.5s 2s ease-out forwards;
+          animation: loader 0.5s 2s ease-out forwards;
+}
+.loading__animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 30px 30px 30px;
+  background-color: #F7F7F7;
+  border-radius: 15px;
+}
+.loading__animation .loading__balls {
+  display: flex;
+  margin-bottom: 7px;
+}
+.loading__animation .ball {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+.loading__animation .ball:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.loading__animation .ball:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.loading__animation .ball:not(:last-child) {
+  margin-right: 15px;
+}
+.loading__animation .text {
+  font-size: 20px;
+}
+
+@-webkit-keyframes loader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+/* Loading end */
 /* Header */
 header {
   width: 100%;
@@ -92,9 +180,11 @@ header .return {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   color: #FFFFFF;
+  transition: all 0.3s ease-in-out;
 }
 .explore a:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Explore end */
@@ -398,6 +488,8 @@ footer .footer__content__icon a {
   padding: 10px 12px;
   transition: all 0.3s ease;
   position: relative;
+  opacity: 0;
+  transform: translate(-30px);
 }
 .menu__card__title h4 {
   font-weight: 500;
@@ -426,6 +518,46 @@ footer .footer__content__icon a {
   position: absolute;
   top: 39px;
   right: 18px;
+}
+.menu__card__title.one {
+  -webkit-animation: appearance 0.4s 0.2s ease-out forwards;
+          animation: appearance 0.4s 0.2s ease-out forwards;
+}
+.menu__card__title.two {
+  -webkit-animation: appearance 0.4s 0.4s ease-out forwards;
+          animation: appearance 0.4s 0.4s ease-out forwards;
+}
+.menu__card__title.three {
+  -webkit-animation: appearance 0.4s 0.6s ease-out forwards;
+          animation: appearance 0.4s 0.6s ease-out forwards;
+}
+.menu__card__title.four {
+  -webkit-animation: appearance 0.4s 0.8s ease-out forwards;
+          animation: appearance 0.4s 0.8s ease-out forwards;
+}
+.menu__card__title.five {
+  -webkit-animation: appearance 0.4s 1s ease-out forwards;
+          animation: appearance 0.4s 1s ease-out forwards;
+}
+.menu__card__title.six {
+  -webkit-animation: appearance 0.4s 1.2s ease-out forwards;
+          animation: appearance 0.4s 1.2s ease-out forwards;
+}
+.menu__card__title.seven {
+  -webkit-animation: appearance 0.4s 1.4s ease-out forwards;
+          animation: appearance 0.4s 1.4s ease-out forwards;
+}
+.menu__card__title.eight {
+  -webkit-animation: appearance 0.4s 1.6s ease-out forwards;
+          animation: appearance 0.4s 1.6s ease-out forwards;
+}
+.menu__card__title.nine {
+  -webkit-animation: appearance 0.4s 1.8s ease-out forwards;
+          animation: appearance 0.4s 1.8s ease-out forwards;
+}
+.menu__card__title.ten {
+  -webkit-animation: appearance 0.4s 2s ease-out forwards;
+          animation: appearance 0.4s 2s ease-out forwards;
 }
 .menu__check {
   background-color: #99E2D0;
@@ -469,11 +601,26 @@ footer .footer__content__icon a {
   line-height: 19px;
   color: #FFFFFF;
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transition: all 0.3s ease-in-out;
 }
 .menu .order:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.35);
 }
 
+@-webkit-keyframes appearance {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes appearance {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 /* Menu end */
 /* annex pages ------------------------------------------------------------------------------------*/
 /* Responsive */
