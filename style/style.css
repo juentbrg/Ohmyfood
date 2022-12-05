@@ -144,8 +144,8 @@ header .return {
 /* Explore */
 .explore {
   width: 100%;
-  height: 287px;
   padding-top: 39px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,7 +191,6 @@ header .return {
 /* Functioning */
 .functioning {
   width: 100%;
-  height: 440px;
   padding: 48px 5.33% 68px 5.33%;
 }
 .functioning h2 {
@@ -246,7 +245,6 @@ header .return {
 /* Restaurants */
 .restaurants {
   width: 100%;
-  height: 1226px;
   background-color: #F7F7F7;
   padding: 47px 4.5% 64px 4.5%;
 }
@@ -257,7 +255,6 @@ header .return {
 }
 .restaurants__card {
   width: 100%;
-  height: 1058px;
   display: grid;
   gap: 1.7%;
   grid-template-columns: repeat(1, 1fr);
@@ -302,16 +299,16 @@ header .return {
   cursor: default;
 }
 .restaurants__card__image.first {
-  background-image: url(img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
+  background-image: url(../assets/img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
 }
 .restaurants__card__image.second {
-  background-image: url(img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
+  background-image: url(../assets/img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
 }
 .restaurants__card__image.third {
-  background-image: url(img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
+  background-image: url(../assets/img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
 }
 .restaurants__card__image.fourth {
-  background-image: url(img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
+  background-image: url(../assets/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
 }
 .restaurants__card__description {
   width: 100%;
@@ -349,7 +346,6 @@ header .return {
 /* Footer */
 footer {
   width: 100%;
-  height: 197px;
   padding: 22px 25px 33px 25px;
   background-color: #353535;
 }
@@ -394,24 +390,23 @@ footer .footer__content__icon a {
   background-size: cover;
 }
 .banner.first {
-  background-image: url(img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
+  background-image: url(../assets/img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
 }
 .banner.second {
-  background-image: url(img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
+  background-image: url(../assets/img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
   background-position: 70%;
 }
 .banner.third {
-  background-image: url(img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
+  background-image: url(../assets/img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
 }
 .banner.fourth {
-  background-image: url(img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
+  background-image: url(../assets/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
 }
 
 /* Banner end */
 /* Menu */
 .menu {
   width: 100%;
-  height: auto;
   padding: 32px 13px 40px 13px;
   margin-top: -50px;
   border-radius: 50px 50px 0 0;
@@ -419,7 +414,7 @@ footer .footer__content__icon a {
 }
 .menu__title {
   display: flex;
-  width: 317px;
+  width: 95%;
   height: 27px;
   line-height: 41px;
   margin: 0 4px 42px 4px;
@@ -444,7 +439,6 @@ footer .footer__content__icon a {
 }
 .menu__food {
   width: 100%;
-  height: 275px;
   margin-bottom: 40px;
 }
 .menu__food h3 {
@@ -465,10 +459,9 @@ footer .footer__content__icon a {
 }
 .menu__card {
   width: 100%;
-  height: auto;
   display: grid;
   gap: 5.26% 0;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 100%);
   grid-template-rows: repeat(4, 68.07px);
 }
 .menu__card__content {
@@ -571,8 +564,9 @@ footer .footer__content__icon a {
 }
 .menu__check i {
   color: #FFFFFF;
+  margin-left: -25px;
   font-size: 25px;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease, margin 0s;
   transform: rotate(180deg);
 }
 .menu__card__content:hover .menu__card__title {
@@ -584,6 +578,7 @@ footer .footer__content__icon a {
   opacity: 100%;
 }
 .menu__card__content:hover .menu__check i {
+  margin-left: 0;
   transform: rotate(0);
 }
 .menu__btn {
@@ -624,6 +619,11 @@ footer .footer__content__icon a {
 /* Menu end */
 /* annex pages ------------------------------------------------------------------------------------*/
 /* Responsive */
+@media all and (max-width: 350px) {
+  .menu__title h2 {
+    font-size: 25px;
+  }
+}
 @media all and (min-width: 783px) {
   /* index */
   .functioning {
@@ -633,7 +633,6 @@ footer .footer__content__icon a {
     padding: 47px 16% 64px 16%;
   }
   footer {
-    height: 14px;
     padding: 22px 25px 33px 25px;
     display: flex;
     position: relative;
@@ -679,7 +678,6 @@ footer .footer__content__icon a {
 @media all and (min-width: 1100px) {
   /*index*/
   .functioning {
-    height: auto;
     padding: 50px 14.29% 80px 14.29%;
   }
   .functioning__card {
@@ -689,7 +687,6 @@ footer .footer__content__icon a {
     grid-template-rows: repeat(1, 72.38px);
   }
   .restaurants {
-    height: auto;
     padding: 46px 14.29% 82px 14.29%;
   }
   .restaurants__card {

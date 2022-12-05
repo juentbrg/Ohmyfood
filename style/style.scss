@@ -135,8 +135,8 @@ header{
 /* Explore */
 .explore{
     width: 100%;
-    height: 287px;
     padding-top: 39px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,7 +182,6 @@ header{
 /* Functioning */
 .functioning{
     width: 100%;
-    height: 440px;
     padding: 48px 5.33% 68px 5.33%;
     h2{
         font-weight: 700;
@@ -237,7 +236,6 @@ header{
 /* Restaurants */
 .restaurants{
     width: 100%;
-    height: 1226px;
     background-color: $color-grey-back;
     padding: 47px 4.50% 64px 4.50%;
     h2{
@@ -247,7 +245,6 @@ header{
     }
     &__card{
         width: 100%;
-        height: 1058px;
         display: grid;
         gap: 1.7%;
         grid-template-columns: repeat(1, 1fr);
@@ -289,16 +286,16 @@ header{
         }
     }
     &__card__image.first{
-        background-image: url(img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
+        background-image: url(../assets/img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
     }
     &__card__image.second{
-        background-image: url(img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
+        background-image: url(../assets/img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
     }
     &__card__image.third{
-        background-image: url(img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
+        background-image: url(../assets/img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
     }
     &__card__image.fourth{
-        background-image: url(img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
+        background-image: url(../assets/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
     }
     &__card__description{
         width: 100%;
@@ -337,7 +334,6 @@ header{
 /* Footer */
 footer{
     width: 100%;
-    height: 197px;
     padding: 22px 25px 33px 25px;
     background-color: #353535;
     h3{
@@ -383,17 +379,17 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     &.first{
-        background-image: url(img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
+        background-image: url(../assets/img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
     }
     &.second{
-        background-image: url(img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
+        background-image: url(../assets/img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
         background-position: 70%;
     }
     &.third{
-        background-image: url(img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
+        background-image: url(../assets/img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
     }
     &.fourth{
-        background-image: url(img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
+        background-image: url(../assets/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
     }
 }
 /* Banner end */
@@ -401,14 +397,13 @@ footer{
 /* Menu */ 
 .menu{
     width: 100%;
-    height: auto;
     padding: 32px 13px 40px 13px;
     margin-top: -50px;
     border-radius: 50px 50px 0 0;
     background-color: $color-grey-back;
     &__title{
         display: flex;
-        width: 317px;
+        width: 95%;
         height: 27px;
         line-height: 41px;
         margin: 0 4px 42px 4px;
@@ -433,7 +428,6 @@ footer{
     }
     &__food{
         width: 100%;
-        height: 275px;
         margin-bottom: 40px;
         h3{
             width: 40px;
@@ -454,10 +448,9 @@ footer{
     }
     &__card{
         width: 100%;
-        height: auto;
         display: grid;
         gap: 5.26% 0;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 100%);
         grid-template-rows: repeat(4, 68.07px);
     }
     &__card__content{
@@ -546,8 +539,9 @@ footer{
         text-align: center;
         i{
             color: $color-white;
+            margin-left: -25px;
             font-size: 25px;
-            transition: all .5s ease;
+            transition: all .5s ease, margin 0s;
             transform: rotate(180deg);
         }
     }
@@ -560,6 +554,7 @@ footer{
         opacity: 100%;
     }
     &__card__content:hover .menu__check i{
+        margin-left: 0;
         transform: rotate(0);
     }
     &__btn{
@@ -596,6 +591,12 @@ footer{
 /* annex pages ------------------------------------------------------------------------------------*/
 
 /* Responsive */ 
+@media all and (max-width: 350px){
+    .menu__title h2{
+        font-size: 25px;
+    }
+}
+
 @media all and (min-width: 783px){
     /* index */
     .functioning{
@@ -606,7 +607,6 @@ footer{
     }
 
     footer{
-        height: 14px;
         padding: 22px 25px 33px 25px;
         display: flex;
         position: relative;
@@ -654,7 +654,6 @@ footer{
 @media all and (min-width: 1100px){
     /*index*/
     .functioning{
-        height: auto;
         padding: 50px 14.29% 80px 14.29%;
         &__card{
             height: auto;
@@ -664,7 +663,6 @@ footer{
         }
     }
     .restaurants{
-        height: auto;
         padding: 46px 14.29% 82px 14.29%;
         &__card{
             height: auto;
