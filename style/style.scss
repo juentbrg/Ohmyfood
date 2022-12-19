@@ -206,6 +206,13 @@ header{
         cursor: default;
         justify-content: center;
         position: relative;
+        transition: all .2s ease;
+    }
+    &__card__content:hover{
+        background: #F5EDFF;
+    }
+    &__card__content:hover &__card__icon i{
+        color: $color-primary;
     }
     &__card__text{
         margin-left: 27px;
@@ -214,21 +221,23 @@ header{
     }
     &__card__icon i{
         color: #7E7E7E;
-    }
-    &__card__icon.purple i{
-        color: $color-primary;
+        transition: all .2s ease;
     }
     &__card__number{
         width: 24px;
         height: 24px;
-        line-height: 24px;
-        border-radius: 25px;
-        padding: 1px 7px;
+        border-radius: 50%;
         background-color: $color-primary;
-        color: $color-white;
         position: absolute;
         left: -12px;
         top: 24.19px;
+    }
+    &__card__number p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
     }
 }
 /* Functioning end */
@@ -264,13 +273,14 @@ header{
     }
     &__card__image{
         display: block;
-        width: 100%;
-        height: 174px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-y: 62%;
-        border-radius: 15px 15px 0 0;
         position: relative;
+        img{
+            width: 100%;
+            height: 174px;
+            object-fit: cover;
+            object-position: 0 62%;
+            border-radius: 15px 15px 0 0;
+        }
         .restaurants__card__new{
             width: 80px;
             height: 29px;
@@ -284,18 +294,6 @@ header{
             right: 14.6px;
             cursor: default;
         }
-    }
-    &__card__image.first{
-        background-image: url(../assets/img/jay-wennington-N_Y88TWmGwA-unsplash.c3ee4ecc.jpg);
-    }
-    &__card__image.second{
-        background-image: url(../assets/img/stil-u2Lp8tXIcjw-unsplash.c5829233.jpg);
-    }
-    &__card__image.third{
-        background-image: url(../assets/img/toa-heftiba-DQKerTsQwi0-unsplash.f2774365.jpg);
-    }
-    &__card__image.fourth{
-        background-image: url(../assets/img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.b3b23d6d.jpg);
     }
     &__card__description{
         width: 100%;
@@ -319,14 +317,24 @@ header{
             top: 23px;
             right: 24.63px;
             cursor: pointer;
-            transition: all .4s ease;
         }
         .restaurants__card__icon i:hover{
+            transition: opacity .8s ease-in-out;
+            animation: heartAnimation .8s ease-in-out;
             font-weight: bold;
             background: $color-gradient-primary;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+    }
+}
+
+@keyframes heartAnimation{
+    0%{
+        opacity: .4;
+    }
+    100%{
+        opacity: 1;
     }
 }
 /* Restaurants */
@@ -417,9 +425,10 @@ footer{
         p i{
             font-size: 24px;
             line-height: 43px;
-            transition: all .4s ease;
         }
         p i:hover{
+            transition: opacity .8s ease-in-out;
+            animation: heartAnimation .8s ease-in-out;
             font-weight: bold;
             background: $color-gradient-primary;
             -webkit-background-clip: text;
@@ -438,9 +447,6 @@ footer{
             margin-bottom: 12px;
             border-bottom: 2px solid $color-tertiary;
             white-space: nowrap;
-        }
-        h3.special{
-            margin-left: 37px;
         }
     }
     &__food.special{
@@ -535,7 +541,7 @@ footer{
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
         border-radius: 0 15.0431px 15.0431px 0;
         line-height: 75px;
-        transition: all .3s ease;
+        transition: all .5s ease;
         text-align: center;
         i{
             color: $color-white;
@@ -637,6 +643,10 @@ footer{
     /* index end */
     
     /* annex pages */
+    .banner{
+        background-position: -80%;
+        height: 400px;
+    }
     .menu{
         width: 80%;
         margin-top: -50px;
@@ -691,6 +701,9 @@ footer{
     /* index end */
 
     /* annex pages */
+    .banner{
+        height: 500px;
+    }
     .menu{
         width: 73.22%;
         margin-top: -50px;
